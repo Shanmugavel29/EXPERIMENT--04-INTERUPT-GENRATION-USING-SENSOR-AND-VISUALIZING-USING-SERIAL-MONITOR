@@ -1,8 +1,7 @@
-###  DATE: 
-
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
+###  DATE: 3.04.2024
+###  NAME: SHANMUGAVEL RM
+###  ROLL NO : 212222230142
+###  DEPARTMENT: AIDS
 
 
 # EXPERIMENT--04-INTERUPT-GENRATION-USING-SENSOR-AND-VISUALIZING-USING-SERIAL-MONITOR
@@ -118,15 +117,60 @@ The diagram below shows how the GPIO pins are connected to the 16 interrupt line
   
 
 ## STM 32 CUBE PROGRAM :
+#include "stdio.h"
 
+#if defined (ICCARM) || defined ARMCC_VERSION)
 
+#define PUTCHAR_PROTOTPYE int fputc(int ch, FILE *f)
+
+#elif defined(GNUC)
+
+#define PUTCHAR_PROTOTPYE int_io_putchar(int ch)
+
+#endif
+
+while(1)
+
+{
+
+}
+void HAL_GOPI_EXIT_Callback(uint16_t GPIO_Pin)
+
+{
+
+if(HAL_GPIO_ReadPin(GPIOB_GPIO_PIN_4)==1)
+
+{
+
+printf("An interrupt has occured");
+
+}
+
+else
+
+{
+
+}
+
+}
+
+PUTCAHR_PROTOTYPE
+
+{
+
+HAL_UART_Transmit(&huart2, (unit8_t*)&ch, 1, 0xFFFF);
+
+return ch; }
 
 ## Output screen shots of serial port utility   :
- 
- 
+ ![exp4iot](https://github.com/Shanmugavel29/EXPERIMENT--04-INTERUPT-GENRATION-USING-SENSOR-AND-VISUALIZING-USING-SERIAL-MONITOR/assets/114382660/07d57ae6-5760-48c1-b1ee-cafe6517df41)
+
  ## Circuit board :
- 
- 
+## WITH OBSTACLE IMAGE
+![WhatsApp Image 2024-02-21 at 9 54 31 AM](https://github.com/deepika3095/EXPERIMENT--02-INTERFACEING-A-DIGITAL-INPUT-TO-IOT-DEVELOPMENT-BOARD-/assets/151625159/bfc734bc-a0fa-4e85-93d9-269a3b1cd87c)
+
+## WITHOUT OBSTACLE IMAGE
+ ![WhatsApp Image 2024-02-23 at 9 21 17 AM](https://github.com/deepika3095/EXPERIMENT--02-INTERFACEING-A-DIGITAL-INPUT-TO-IOT-DEVELOPMENT-BOARD-/assets/151625159/902d26d0-d205-4e32-ad7c-c3189e7380b2)
  
 ## Result :
 Interfacing a  IR SENSOR and interrupt is generated using external interrupt mode , visualized on serial port 
