@@ -151,14 +151,6 @@ printf("INTERRUPT GENERATED");
 
 }
 
-else
-
-{
-
-}
-
-}
-
 PUTCAHR_PROTOTYPE
 
 {
