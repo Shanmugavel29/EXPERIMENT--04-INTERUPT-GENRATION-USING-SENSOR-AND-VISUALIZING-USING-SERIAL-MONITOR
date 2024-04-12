@@ -128,6 +128,11 @@ The diagram below shows how the GPIO pins are connected to the 16 interrupt line
 #define PUTCHAR_PROTOTPYE int_io_putchar(int ch)
 
 #endif
+int main(void)
+{
+HAL_Init();
+SystemClock_Config();
+MX_GPIO_Init();
 
 while(1)
 
