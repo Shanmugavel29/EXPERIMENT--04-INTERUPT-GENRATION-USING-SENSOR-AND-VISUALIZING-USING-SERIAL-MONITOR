@@ -142,7 +142,7 @@ if(HAL_GPIO_ReadPin(GPIOB_GPIO_PIN_4)==1)
 
 {
 
-printf("An interrupt has occured");
+printf("INTERRUPT OCCUPIED");
 
 }
 
